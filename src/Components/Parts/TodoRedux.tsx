@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 interface IProps {
   todos: string[];
@@ -10,7 +10,7 @@ interface IState {
 }
 
 /* tslint:disable:jsx-no-lambda */
-export default class extends React.Component<IProps, IState> {
+class TodoRedux extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 
@@ -50,3 +50,5 @@ export default class extends React.Component<IProps, IState> {
     onClickAddButton(text);
   };
 }
+
+export default TodoRedux
